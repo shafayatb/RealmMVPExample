@@ -2,9 +2,11 @@ package mvp.example.tut.realmmvpexample.book;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import mvp.example.tut.realmmvpexample.book.models.Book;
+import mvp.example.tut.realmmvpexample.book.view.CardViewHolder;
 
 /**
  * Created by iBaax on 7/27/16.
@@ -41,6 +43,10 @@ public interface MVP_Books {
         int getBookCount();
 
         void clickDeleteBook(Book book, int adapterPos, int layoutPos);
+
+        CardViewHolder createViewHolder(ViewGroup parent, int viewType);
+
+        void bindViewHolder(CardViewHolder holder, int position);
 
     }
 
